@@ -7,16 +7,31 @@ import RickAndMortyAPIComponent from './components/router/RickAndMortyAPICompone
 function App() {
   return (
     <Router>
-      <div>
-        <ul>
-          <Link to='/portfolio'>Portfolio</Link>
+      <div
+        className='h-[100px]'
+      >
+        <ul
+          className='flex justify-center align-center p-0 bg-slate-500 h-full'
+        >
+          <li
+            className='px-5 py-2 text-2xl hover:decoration-solid flex '
+          >
+              <Link to='/portfolio' className='hover:underline mt-[20px]'>Portfolio</Link>
+            </li>
+            <li
+              className='px-5 py-2 text-2xl hov
+er:decoration-solid flex '
+            >
+              <Link to='/calculator' className='hover:underline mt-[20px]'>Calculator</Link>
+            </li>
+            <li
+              className='px-5 py-2 text-2xl hov
+er:decoration-solid flex '
+            >
+              <Link to='/rickandmorty' className='hover:underline mt-[20px]'>Rick And Morty</Link>
+            </li >
         </ul>
-        <ul>
-          <Link to='/calculator'>Calculator</Link>
-        </ul>
-        <ul>
-          <Link to='/rickandmorty'>Rick And Morty</Link>
-        </ul>
+        
       </div>
       <Routes>
         <Route exact path='/portfolio' element={<PortfolioComponent/>}></Route>

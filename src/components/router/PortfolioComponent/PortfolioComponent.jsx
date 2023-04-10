@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PortfolioComponent = () => {
+function PortfolioComponent() {
   return (
     <div>PortfolioComponent</div>
   )
