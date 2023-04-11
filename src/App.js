@@ -16,7 +16,7 @@ function App() {
           <li
             className='px-5 py-2 text-2xl hover:decoration-solid flex '
           >
-              <Link to='/portfolio' className='hover:underline mt-[20px]'>Portfolio</Link>
+              <Link to='/' className='hover:underline mt-[20px]'>Portfolio</Link>
             </li>
             <li
               className='px-5 py-2 text-2xl hov
@@ -34,7 +34,7 @@ er:decoration-solid flex '
         
       </div>
       <Routes>
-        <Route exact path='/portfolio' element={<PortfolioComponent/>}></Route>
+        <Route exact path='/' element={<PortfolioComponent/>}></Route>
         <Route exact path='/calculator' element={<CalculatorComponent/>}></Route>
         <Route exact path='/rickandmorty' element={<RickAndMortyAPIComponent/>}></Route>
       </Routes>

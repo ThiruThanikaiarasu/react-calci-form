@@ -33,10 +33,10 @@ export class RickAndMortyAPIComponent extends Component {
                 className='flex justify-center p-2 bg-slate-300 text-lg'
             >
                 <div
-                    className='grid grid-cols-3 gap-10'
+                    className='grid grid-cols-2 gap-10'
                 >
                     <div
-                        className='col-span-3  text-center text-black font-bold mt-10 h-[75px] rounded-md shadow-slate-900 '
+                        className='col-span-2  text-center text-black font-bold mt-10 h-[75px] rounded-md shadow-slate-900 '
                     >
                         <h1
                             className='text-[55px] text-bold h-full flex justify-center align-center'
@@ -45,45 +45,57 @@ export class RickAndMortyAPIComponent extends Component {
                     {posts.length
                         ?posts.map(post=>
                             <div key={post.id}
-                                className='list-none bg-slate-700 shadow-slate-700 rounded-md px-5 pb-2 text-white flex flex-col justify-between line-clamp-6 py-4'
+                                className='list-none bg-slate-700 shadow-slate-700 rounded-md px-5 pb-2 text-white flex  justify-between line-clamp-6 py-4'
                             >
-                                
-                                
-                                <ul>
-                                    <li>
-                                        <h1
-                                            className='text-3xl font-bold'
+                                <div
+                                    className='w-[50%]'
+                                >
+                                    <ul>
+                                        <li>
+                                            <img src= {post.image} className='object-fit' />
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div
+                                    className='w-[50%]'
+                                >
+                                    <ul>
+                                        <li>
+                                            <h1
+                                                className='text-3xl font-bold'
+                                            >
+                                                {post.name}</h1>
+                                        </li>
+                                        <li
+                                            className='text-xl'
                                         >
-                                            {post.name}</h1>
-                                    </li>
-                                    <li
-                                        className='text-xl'
-                                    >
-                                        <span>{post.status} - {post.species}</span> 
-                                    </li>
-                                </ul>
+                                            <span>{post.status} - {post.species}</span> 
+                                        </li>
+                                    </ul>
 
-                                <ul>
-                                    <li>
-                                        <p
-                                            className='text-md text-slate-500'
-                                        >Last Known location:</p>
-                                    </li>
-                                    <li>
-                                        <span>{post.location.name}</span>
-                                    </li>
-                                </ul>
+                                    <ul>
+                                        <li>
+                                            <p
+                                                className='text-md text-slate-500'
+                                            >Last Known location:</p>
+                                        </li>
+                                        <li>
+                                            <span>{post.location.name}</span>
+                                        </li>
+                                    </ul>
 
-                                <ul>
-                                    <li>
-                                        <p
-                                            className='text-md text-slate-500'
-                                        >First seen in:</p>
-                                    </li>
-                                    <li>
-                                        <span>{post.origin.name}</span>
-                                    </li>
-                                </ul>
+                                    <ul>
+                                        <li>
+                                            <p
+                                                className='text-md text-slate-500'
+                                            >First seen in:</p>
+                                        </li>
+                                        <li>
+                                            <span>{post.origin.name}</span>
+                                        </li>
+                                    </ul>
+                                </div>
                                 
                             </div>)
                         
